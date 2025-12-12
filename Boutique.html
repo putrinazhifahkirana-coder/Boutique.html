@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nana Boutique</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    h2 {
+      text-align: center;
+    }
+
+    nav {
+      width: 100%;
+      background-color: #ff8bb3;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    nav h2 {
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #beranda {
+      height: 100vh;
+      background-image: url('https://i.pinimg.com/736x/3e/bd/cd/3ebdcdbeb49853fa1af134aa85ab20e1.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 80px;
+      text-align: center;
+    }
+
+    #beranda .text {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px 30px;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 500px;
+    }
+
+    #beranda h1 {
+      font-size: 40px;
+      color: #d63b7f;
+    }
+
+    #produk {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .produk-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      width: 230px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #ff8bb3;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-wrapper {
+      max-width: 600px;
+      margin: 30px auto;
+    }
+
+    form {
+      background-color: #ffe3ec;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff8bb3;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .contact-info {
+      background-color: #ffe3ec;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    footer {
+      background-color: #ff8bb3;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h2>Nana Boutique</h2>
+    <div>
+      <a href="#beranda">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#pesan">Form Pesan</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </nav>
+
+  <section id="beranda">
+    <div class="text">
+      <h1>Welcome Nana Boutique</h1>
+      <p>Fashion Kekinian, Cantik & Terjangkau ✨</p>
+    </div>
+  </section>
+
+  <section id="produk">
+    <h2>Produk Kami</h2>
+
+    <div class="produk-container">
+     <div class="card">
+        <img src="https://i.pinimg.com/736x/3a/a8/3f/3aa83f10072973638534f91bc2fdd833.jpg">
+        <h3>Baju Kemeja</h3>
+        <p>Rp 120.000</p>
+        <button onclick="pesan()">Pesan</button>
+      </div>
+
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/cf/cb/04/cfcb04813c133fac9a78519c5af4ed09.jpg">
+        <h3>Blouse Cantik</h3>
+        <p>Rp 95.000</p>
+        <button onclick="pesan()">Pesan</button>
+      </div>
+       <div class="card">
+        <img src="https://i.pinimg.com/736x/51/f8/9e/51f89ea328babc55b10e614d0dbdf0b0.jpg">
+        <h3>Celana Kulot</h3>
+        <p>Rp 195.000</p>
+        <button onclick="pesan()">Pesan</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/5f/37/27/5f37273cf0d348f7118a4903c844d543.jpg">
+        <h3>Rok</h3>
+        <p>Rp 123.000</p>
+        <button onclick="pesan()">Pesan</button>
+      </div>
+       <div class="card">
+        <img src="https://i.pinimg.com/736x/7c/94/10/7c9410a404ad9f3d535e3204b33a87f4.jpg">
+        <h3>Jilbab segiempat</h3>
+        <p>Rp 85.000</p>
+        <button onclick="pesan()">Pesan</button>
+      </div>
+       <div class="card">
+        <img src="https://i.pinimg.com/1200x/46/67/e3/4667e371ca9926b2c73b3b4601547a22.jpg">
+        <h3>Sepatu Heal</h3>
+        <p>Rp 200.000</p>
+        <button onclick="pesan()">Pesan</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/c3/08/e1/c308e17e6d42ce7fc2c3867cece44e07.jpg">
+        <h3>Tas</h3>
+        <p>Rp 295.000</p>
+        <button onclick="pesan()">Pesan</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/53/f6/44/53f64479769d85f1224e9ef0c9f9a373.jpg">
+        <h3>Sepatu Snakers</h3>
+        <p>Rp 300.000</p>
+        <button onclick="pesan()">Pesan</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/bf/6c/01/bf6c0111fdecfa055de27becd3425ae5.jpg">
+        <h3>Jam Tangan</h3>
+        <p>Rp 45.000</p>
+        <button onclick="pesan()">Pesan</button>
+      </div>
+      <div class="card">
+        <img src="https://img.fantaskycdn.com/58debf9c758c05aa3995cf7c83e45141_1024x.jpeg">
+        <h3>Kalung Emas</h3>
+        <p>Rp 1.200.000</p>
+        <button onclick="pesan()">Pesan</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="pesan">
+    <h2>Form Pemesanan</h2>
+
+    <div class="form-wrapper">
+      <form onsubmit="return kirimPesan()">
+        <input type="text" placeholder="Nama Lengkap" required>
+        <input type="number" placeholder="Nomor HP" required>
+        <textarea placeholder="Alamat Lengkap" rows="4" required></textarea>
+        <button type="submit">Kirim Pesanan</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Hubungi Kami</h2>
+    <div class="contact-info">
+      <p>📞 Telepon: 0852-6759-3976</p>
+      <p>📧 Email: butiknana@gmail.com</p>
+      <p>📍 Alamat: Jl. Melati RT. 25A, Aska Agung</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Butik Nana | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function pesan() {
+      alert("Silakan isi form pemesanan ya 😊");
+      location.href = "#pesan";
+    }
+
+    function kirimPesan() {
+      alert("Terima kasih sudah memesan di toko kami! ❤️");
+      return false;
+    }
+  </script>
+
+</body>
+</html>
